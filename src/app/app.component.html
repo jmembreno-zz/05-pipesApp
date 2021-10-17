@@ -1,21 +1,3 @@
-<div class="text-layout">
+<app-menu></app-menu>
 
-    <h1>{{nombre |titlecase}}</h1>
-    <h1>{{valor |currency}}</h1>
-    <h1>{{obj |json}}</h1>
-
-</div>
-
-
-<button class="p-button-help" icon="pi pi-bell" iconPos="right" pButton (click)="mostrarnombre()"
-    label="Cambiar Nombre"></button>
-
-<p-card [header]="nombre |titlecase" subheader="Esto es un SubHedear">
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-        deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-        neque
-        quas!</p>
-
-
-</p-card>
+<router-outlet></router-outlet>
