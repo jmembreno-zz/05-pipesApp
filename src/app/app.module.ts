@@ -1,5 +1,6 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
@@ -15,6 +16,7 @@ import localeEs from '@angular/common/locales/es-NI'
 import localeFr from '@angular/common/locales/fr'
 import { registerLocaleData} from '@angular/common'
 
+
 registerLocaleData(localeEs );
 registerLocaleData(localeFr );
 
@@ -27,9 +29,10 @@ registerLocaleData(localeFr );
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRouterModule,
     SharedModule,
-    VentasModule
+    VentasModule,
   ],
   providers: [
     {provide:LOCALE_ID, useValue :  'es-NI'}
