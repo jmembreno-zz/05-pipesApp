@@ -9,11 +9,75 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoComunesComponent {
 
-  nombre:string='Jairo Membreño';
-  genero:string='masculino';
+  //i18nSelect
 
-  invitacionMapa ={
-    'masculino':'invitarlo',
+  nombre: string = 'Jairo Membreño';
+  genero: string = 'masculino';
+
+  invitacionMapa = {
+    'masculino': 'invitarlo',
     'femenino': 'invitarla'
   }
+
+  //i18nPrural
+
+  clientes: string[] = ['Maria', 'carlos', 'jairo', 'rafael', 'martha', 'karen'];
+
+  clientesmapa = {
+    '=0': 'no tenemos ningun cliente esperando',
+    '=1': `tenemos # cliente esperando`,
+    'other': `tenemos # clientes esperando`
+
+  }
+
+  cambiarcliente() {
+
+    this.nombre = 'sara Membreño';
+    this.genero = 'femenino'
+
+
+  }
+
+  borrarcliente() {
+
+    this.clientes.pop();//Borra el ultimo elemento
+
+  }
+
+  //KeyValue Pipe
+
+  persona = {
+    nombre: 'Fernando',
+    edad: 35,
+    direccion: 'Ottawa, Canada'
+
+  }
+
+  //JsonPipe
+
+  heroes =[
+
+    {
+      nombre:'Superman',
+      value:true
+    },
+    {
+      nombre:'Robin',
+      value:false
+    },
+    {
+      nombre:'Aquaman',
+      value:true
+    }
+    
+
+  ]
+
+
+
+
+
 }
+
+
+
