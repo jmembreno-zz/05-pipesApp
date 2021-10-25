@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 
 @Component({
@@ -55,23 +56,36 @@ export class NoComunesComponent {
 
   //JsonPipe
 
-  heroes =[
+  heroes = [
 
     {
-      nombre:'Superman',
-      value:true
+      nombre: 'Superman',
+      value: true
     },
     {
-      nombre:'Robin',
-      value:false
+      nombre: 'Robin',
+      value: false
     },
     {
-      nombre:'Aquaman',
-      value:true
+      nombre: 'Aquaman',
+      value: true
     }
-    
+
 
   ]
+
+
+
+  //Async Pipe
+  miObservable = interval(2000); //0,1,2,3,4,5,6
+
+  valorPromesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+
+      resolve('Tenemos data de Pormesa Promesa');
+
+    }, 3500)
+  });
 
 
 
