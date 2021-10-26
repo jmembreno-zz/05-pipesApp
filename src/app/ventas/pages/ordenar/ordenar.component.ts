@@ -11,6 +11,9 @@ export class OrdenarComponent {
 
   enMayusculas: boolean = false;
 
+  ordenarPor: string = '';
+  tipoOrden: number = 1;
+
   heroes: Heroe[] = [
     {
       nombre: 'Supeman',
@@ -38,6 +41,13 @@ export class OrdenarComponent {
       color: Color.verde
     },
   ];
+
+  cambiarOrden(valor: string) {
+    this.ordenarPor = valor;
+    this.tipoOrden = this.tipoOrden * -1;
+
+
+  }
 
 
 }
